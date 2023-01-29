@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
-
 # Display time 12 hours and 59 mintes
+
 
 hour=0
 
