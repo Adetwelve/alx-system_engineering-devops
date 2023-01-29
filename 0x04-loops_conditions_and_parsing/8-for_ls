@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
-: '
-script display content of current directory
-in a list format,  while onnly part of the name
-after the first dash is displayed'
+
+#script display content of current directory
+#in a list format,  while onnly part of the name
+#after the first dash is displayed
 
 list=$(ls)
 
