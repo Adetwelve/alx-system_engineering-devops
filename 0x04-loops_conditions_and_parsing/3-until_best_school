@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+#display "Best school" 10 tims using util
+
+i=1
+until [ $i -gt 10 ]
+do
+	echo "Best School"
+	i=$(( i + 1 ))
+done
