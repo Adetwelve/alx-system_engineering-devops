@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
-: '
-Display number 20 times
-Display "bad luck from China" for the 4th loop
-Display "bad luck from Japan" for the 9th loop
-Display "bad luck from Italy" for the 9th loop'
+
+#Display number 20 times
+#Display "bad luck from China" for the 4th loop
+#Display "bad luck from Japan" for the 9th loop
+#Display "bad luck from Italy" for the 9th loop
 
 i=1
 while [ $i -le 20 ]
