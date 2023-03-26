@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+#Applying ssh to connect to server using private key
+#variables
+keyfile="~/.ssh/school"
+user="ubuntu"
+server="54.236.51.16"
+ssh -i "$keyfile" "$user"@"$server"
