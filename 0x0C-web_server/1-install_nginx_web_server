@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 # Install nginx with the following configuration:
-#    Listen to port 80
+#    Listen to port 80.
 #    Returns a page "Hello World" when queried
-#    at the root with Get request.
+#    at the root with curl Get request.
 
 # Install nginx
 sudo apt-get update
