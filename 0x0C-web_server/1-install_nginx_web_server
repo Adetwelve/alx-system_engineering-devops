@@ -1,8 +1,7 @@
-#!/usr/bin/env bash
-# Install nginx with the following configuration:
-#    Listen to port 80.
-#    Returns a page "Hello World" when queried
-#    at the root with curl Get request.
+nstalls Nginx with the following configurations:
+#    Listens on port 80.
+#    Returns a page containing "Hello World" when queried
+#    at the root with a curl GET request.
 
 # Install nginx
 sudo apt-get update
@@ -13,10 +12,10 @@ mkdir /etc/nginx/html
 
 # Creating Sample Page
 touch /etc/nginx/html/index.html
-echo "Hello World" > /etc/nginx/html/index.html
+echo "Hello World!" > /etc/nginx/html/index.html
 
 # Creating the Server Block File
-echo "server {
+echo "server { 
 	listen 80 default_server;
 	listen [::]:80 default_server;
 	
