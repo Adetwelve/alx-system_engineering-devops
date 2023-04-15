@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-
+# A script that displays information about sub-domain
 func ()
 {
 	query=$(dig "$2.$1" | grep -A1 "ANSWER SECTION:" | tail -1)
