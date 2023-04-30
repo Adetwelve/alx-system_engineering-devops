@@ -14,7 +14,7 @@ if __name__ == "__main__":
     todo_ep = "{}/todos/".format(url)
     user_name = requests.get(user_ep).json().get('username')
     todo = requests.get(todo_ep).json()
-    todo_usr = {"user_id": [{"task": t.get('title'),
+    todo_usr = {user_id: [{"task": t.get('title'),
                              "completed":  t.get('completed'),
                              "username": user_name}
                             for t in todo if t.get('userId') == user_id]
