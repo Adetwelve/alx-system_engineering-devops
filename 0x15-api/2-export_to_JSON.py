@@ -1,5 +1,7 @@
 #!/usr/bin/python3
+
 """A script using REST API for Query"""
+
 import json
 import requests
 import sys
@@ -15,8 +17,8 @@ if __name__ == "__main__":
     todo_usr = {"user_id": [{"task": t.get('title'),
                              "completed":  t.get('completed'),
                              "username": user_name}
-                             for t in todo if t.get('userId') == user_id]
-                             }
-   # save in a json file
+                            for t in todo if t.get('userId') == user_id]
+                }
+    # save in a json file
     with open("{}.json".format(user_id), 'w', encoding='utf-8') as f:
         json.dump(todo_usr, f)
