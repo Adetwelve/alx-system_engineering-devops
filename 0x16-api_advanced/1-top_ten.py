@@ -15,5 +15,6 @@ def top_ten(subreddit):
         posts = response.get('data').get('children')
         for post in posts:
             print(post.get('data').get('title'))
-    """invalide response"""
-    print(None)
+    else:
+        """invalide response"""
+        print(None)
