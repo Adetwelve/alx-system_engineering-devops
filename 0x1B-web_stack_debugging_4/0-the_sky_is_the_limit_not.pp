@@ -1,10 +1,5 @@
 # Increase number of limit for request
-file { '/etc/default/nginx':
-  ensure  => file,
-  content => "ULIMIT='-n 2048'\n",
-}
-
-exec { 'restart_nginx':
-  command  => 'service nginx restart',
-  refreshonly => true,
+{ 'change_ulimit':
+  command => "echo 'ULIMIT=\"-n 2048\"' > /etc/default/nginx && service nginx restart",
+  onlyif  => "grep -q '^ULIMIT=\"-n 2048\"' /etc/default/nginx",
 }
