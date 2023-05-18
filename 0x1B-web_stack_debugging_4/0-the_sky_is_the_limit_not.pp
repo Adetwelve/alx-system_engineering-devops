@@ -1,5 +1,11 @@
-# Increase number of limit for request
-{ 'change_ulimit':
-  command => "echo 'ULIMIT=\"-n 2048\"' > /etc/default/nginx && service nginx restart",
-  onlyif  => "grep -q '^ULIMIT=\"-n 2048\"' /etc/default/nginx",
+# A puppet manifest that increase Ulimit 
+exec { 'fix--for-nginx':
+  command => 'sed -i "s/15/4096/" /etc/default/nginx',
+  path    => '/usr/local/bin/:/bin/'
+} ->
+
+# Restart Nginx
+exec { 'nginx-restart':
+  command => 'nginx restart',
+  path    => '/etc/init.d/'
 }
